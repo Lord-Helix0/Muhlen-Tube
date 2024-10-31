@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Muhlen-Tube</h2>
+    <h2>Comments List</h2>
+    <ul> <!-- ul: unordered list (wrapper) -->
+        <% for (comment of comments) { %>
+            <li><%= comment.contents %></li> <!-- li: list item -->
+        <% } %>
+    </ul>
+    <hr>
+    <form action="/comment" method="post">
+    <!-- When this form tag activated (submitted), moves to route '/comment'  -->
+        <label for="Public Comments">Leave Your Comment:</label>
+        <input type="text" id="comment" name="comment">
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
